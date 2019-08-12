@@ -41,6 +41,10 @@ class PickupViewController: UIViewController {
     }
     
     private func bindOutputs() {
+        viewModel.output.isLoading
+            .drive(UIApplication.shared.rx.isNetworkIndicatorAnimated)
+            .disposed(by: disposeBag)
+        
         viewModel.output.pickupDataSource
             .drive(tableView.rx.items) { [weak self] (tableView, index, item) in
                 let indexPath = IndexPath(row: index, section: 0)
@@ -59,6 +63,15 @@ class PickupViewController: UIViewController {
             .drive(onNext: { [weak self] (_) in
                 guard let self = self else { return }
                 self.showAlert()
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.output.onRequestShowAPIError
+            .drive(onNext: { [weak self] (error) in
+                let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(alertAction)
+                self?.present(alertController, animated: true, completion: nil)
             })
             .disposed(by: disposeBag)
     }

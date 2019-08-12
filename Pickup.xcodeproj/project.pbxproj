@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D7B661467DB89372FA6B530 /* libPods-Pickup.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A9577EE55242ECFE0B87D3 /* libPods-Pickup.a */; };
-		5C5DA30CFD15337151F70D8C /* libPods-PickupTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CFF71E3B98DD147522D204 /* libPods-PickupTests.a */; };
+		9A561F6CA2908B9411EB13EC /* Pods_Pickup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FE39A95B4989673C9AF0FF /* Pods_Pickup.framework */; };
 		9D5F7DD923007B7F009BC991 /* GeoLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F7DD823007B7F009BC991 /* GeoLocationService.swift */; };
 		9D5F7DDC23007DB0009BC991 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F7DDA23007DB0009BC991 /* CLLocationManager+Rx.swift */; };
 		9D5F7DDD23007DB0009BC991 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F7DDB23007DB0009BC991 /* RxCLLocationManagerDelegateProxy.swift */; };
 		9D5F7DDF2301C3C5009BC991 /* PickupTableViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F7DDE2301C3C5009BC991 /* PickupTableViewCellData.swift */; };
+		9D5F7DE12301CE0E009BC991 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F7DE02301CE0E009BC991 /* ActivityIndicator.swift */; };
 		9DE2A8A322FD2108005D31A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE2A8A222FD2108005D31A9 /* AppDelegate.swift */; };
 		9DE2A8A822FD2108005D31A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE2A8A622FD2108005D31A9 /* Main.storyboard */; };
 		9DE2A8AA22FD2108005D31A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DE2A8A922FD2108005D31A9 /* Assets.xcassets */; };
@@ -25,6 +25,7 @@
 		9DE2A8D022FD3260005D31A9 /* PickupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE2A8CE22FD3260005D31A9 /* PickupTableViewCell.swift */; };
 		9DE2A8D122FD3260005D31A9 /* PickupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DE2A8CF22FD3260005D31A9 /* PickupTableViewCell.xib */; };
 		9DE2A8E622FD544A005D31A9 /* PickupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE2A8E522FD544A005D31A9 /* PickupService.swift */; };
+		C5501E2865D0DBCFA78F7C73 /* Pods_PickupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB473AB49E211E76D617B72 /* Pods_PickupTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,13 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08FE39A95B4989673C9AF0FF /* Pods_Pickup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pickup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E9432854C53C2D1BE42B16 /* Pods-PickupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupTests.debug.xcconfig"; path = "Target Support Files/Pods-PickupTests/Pods-PickupTests.debug.xcconfig"; sourceTree = "<group>"; };
-		53A9577EE55242ECFE0B87D3 /* libPods-Pickup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pickup.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB473AB49E211E76D617B72 /* Pods_PickupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5EAABC6F6C23A87D7E5E95 /* Pods-Pickup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pickup.debug.xcconfig"; path = "Target Support Files/Pods-Pickup/Pods-Pickup.debug.xcconfig"; sourceTree = "<group>"; };
 		9D5F7DD823007B7F009BC991 /* GeoLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLocationService.swift; sourceTree = "<group>"; };
 		9D5F7DDA23007DB0009BC991 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
 		9D5F7DDB23007DB0009BC991 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
 		9D5F7DDE2301C3C5009BC991 /* PickupTableViewCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupTableViewCellData.swift; sourceTree = "<group>"; };
+		9D5F7DE02301CE0E009BC991 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		9DE2A89F22FD2108005D31A9 /* Pickup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pickup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE2A8A222FD2108005D31A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DE2A8A722FD2108005D31A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +66,6 @@
 		9DE2A8E522FD544A005D31A9 /* PickupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupService.swift; sourceTree = "<group>"; };
 		B965E93F9C7F0B45F2997EA3 /* Pods-Pickup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pickup.release.xcconfig"; path = "Target Support Files/Pods-Pickup/Pods-Pickup.release.xcconfig"; sourceTree = "<group>"; };
 		D57529759752992ADD597E96 /* Pods-PickupTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupTests.release.xcconfig"; path = "Target Support Files/Pods-PickupTests/Pods-PickupTests.release.xcconfig"; sourceTree = "<group>"; };
-		E1CFF71E3B98DD147522D204 /* libPods-PickupTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PickupTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D7B661467DB89372FA6B530 /* libPods-Pickup.a in Frameworks */,
+				9A561F6CA2908B9411EB13EC /* Pods_Pickup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C5DA30CFD15337151F70D8C /* libPods-PickupTests.a in Frameworks */,
+				C5501E2865D0DBCFA78F7C73 /* Pods_PickupTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +102,8 @@
 		24D5E0D818AF835CD26061D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53A9577EE55242ECFE0B87D3 /* libPods-Pickup.a */,
-				E1CFF71E3B98DD147522D204 /* libPods-PickupTests.a */,
+				08FE39A95B4989673C9AF0FF /* Pods_Pickup.framework */,
+				2BB473AB49E211E76D617B72 /* Pods_PickupTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,6 +111,7 @@
 		9D5F7DD723007B3C009BC991 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				9D5F7DE02301CE0E009BC991 /* ActivityIndicator.swift */,
 				9D5F7DDA23007DB0009BC991 /* CLLocationManager+Rx.swift */,
 				9D5F7DDB23007DB0009BC991 /* RxCLLocationManagerDelegateProxy.swift */,
 				9D5F7DD823007B7F009BC991 /* GeoLocationService.swift */,
@@ -209,6 +212,7 @@
 				9DE2A89B22FD2108005D31A9 /* Sources */,
 				9DE2A89C22FD2108005D31A9 /* Frameworks */,
 				9DE2A89D22FD2108005D31A9 /* Resources */,
+				C8D41E33F621FC6E5FBD81BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,6 +346,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C8D41E33F621FC6E5FBD81BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pickup/Pods-Pickup-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pickup/Pods-Pickup-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pickup/Pods-Pickup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -353,6 +374,7 @@
 				9DE2A8CA22FD2D33005D31A9 /* PickupViewController.swift in Sources */,
 				9DE2A8D022FD3260005D31A9 /* PickupTableViewCell.swift in Sources */,
 				9D5F7DDD23007DB0009BC991 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
+				9D5F7DE12301CE0E009BC991 /* ActivityIndicator.swift in Sources */,
 				9D5F7DDF2301C3C5009BC991 /* PickupTableViewCellData.swift in Sources */,
 				9DE2A8CC22FD2D4F005D31A9 /* PickupViewModel.swift in Sources */,
 				9DE2A8C522FD220A005D31A9 /* PickupResponse.swift in Sources */,

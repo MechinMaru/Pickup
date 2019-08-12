@@ -1,4 +1,4 @@
-module Pods_Pickup {
+framework module Pods_Pickup {
   umbrella header "Pods-Pickup-umbrella.h"
 
   export *

@@ -20,8 +20,10 @@ protocol PickupViewModelInput {
 
 protocol PickupViewModelOutput {
     var pickupDataSource: Driver<[PickupTableViewCellData]>! { get }
-    var isLoading: Driver<Bool> { get }
+    var isLoading: ActivityIndicator { get }
     var onRequestShowAlert: Driver<Void>! { get }
+    var onRequestShowAPIError: Driver<Error> { get }
+
 }
 
 protocol PickupViewModelType {
@@ -37,37 +39,39 @@ class PickupViewModel: PickupViewModelType, PickupViewModelInput, PickupViewMode
     var onSelectedPickupItemWithId = BehaviorRelay<Int?>(value: nil)
 
     // MARK - Output
+    var isLoading = ActivityIndicator()
     var pickupDataSource: Driver<[PickupTableViewCellData]>!
-    
-    var isLoading: Driver<Bool> {
-        return _isLoading.asDriver()
-    }
-    
     var onRequestShowAlert: Driver<Void>!
+    var onRequestShowAPIError: Driver<Error> {
+        return _onAPIError.asDriver(onErrorDriveWith: Driver.empty())
+    }
 
     private let disposeBag = DisposeBag()
     private let _pickupDatasource = BehaviorRelay<[Pickup]>(value: [Pickup]())
     private let provider = MoyaProvider<PickupService>()
-    private let onAPIError = PublishRelay<Error>()
+    private let _onAPIError = PublishRelay<Error>()
     private var _isLoading = BehaviorRelay<Bool>(value: false)
 
     init() {
         
         vieWDidLoadTrigger
             .flatMapLatest { [weak self] (_) -> Observable<Event<PickupResponse>> in
-                guard let provider = self?.provider else { return Observable.empty() }
+                guard let provider = self?.provider,
+                let isLoading = self?.isLoading else { return Observable.empty() }
                 
                 return provider.rx.request(PickupService.pickupLoactions(shopId: "1"))
                     .map(PickupResponse.self)
+                    .trackActivity(isLoading)
                     .asObservable()
                     .materialize()
             }
             .flatMapLatest { [weak self] (event) -> Observable<PickupResponse> in
+                guard let self = self else {return Observable.empty() }
                 switch event {
                 case .next(let element):
                    return Observable.just(element)
                 case .error(let error):
-                    self?.onAPIError.accept(error)
+                    self._onAPIError.accept(error)
                     break
                 case .completed:
                     break
