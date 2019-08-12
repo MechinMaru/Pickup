@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct Pickup: Decodable {
    
     var feature: String?
